@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  traffic-generator:
+    build: .
+    container_name: enterprise_traffic_generator
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=development
